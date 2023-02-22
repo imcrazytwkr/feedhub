@@ -101,6 +101,7 @@ func (p *pixivProvider) GetUserIllustrations(ctx context.Context, userId int) (*
 	}
 
 	feed.Entries = illustrations
+	feed.Author = illustrations[0].Author
 	feed.Updated = illustrations[0].Updated
 	feed.Published = illustrations[0].Published
 
