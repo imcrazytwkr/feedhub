@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -52,10 +53,10 @@ func LoggerWithConfig(logger *zerolog.Logger, skipPaths []string) gin.HandlerFun
 
 		// Log using the params
 		var logEvent *zerolog.Event
-		if statusCode == 500 {
-			logEvent = logger.Error()
-		} else {
+		if statusCode < http.StatusInternalServerError {
 			logEvent = logger.Info()
+		} else {
+			logEvent = logger.Error()
 		}
 
 		logEvent.Str("client_ip", c.ClientIP())
