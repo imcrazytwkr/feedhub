@@ -33,6 +33,7 @@ func main() {
 
 	engine := gin.New()
 	engine.Use(middleware.DefaultLogger(), gin.Recovery())
+	engine.Use(middleware.RequestId())
 	engine.Use(middleware.ResponseFormat(engine))
 
 	parserPool := &fastjson.ParserPool{}
