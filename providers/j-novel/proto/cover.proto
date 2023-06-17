@@ -1,0 +1,10 @@
+syntax = "proto3";
+package j_novel;
+
+option go_package = "providers/j-novel/proto";
+
+message Cover {
+  string originalUrl = 1;
+  string coverUrl = 2;
+  string thumbnailUrl = 3;
+}

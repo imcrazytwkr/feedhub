@@ -1,0 +1,40 @@
+syntax = "proto3";
+package j_novel;
+
+option go_package = "providers/j-novel/proto";
+
+import "google/protobuf/timestamp.proto";
+import "providers/j-novel/proto/cover.proto";
+
+enum SeriesType {
+  UNKNOWN = 0;
+  NOVEL = 1;
+  MANGA = 2;
+}
+
+enum SeriesStatus {
+  ONGOING = 0;
+  COMPLETE = 1;
+  HIATUS = 2;
+}
+
+message Series {
+  string legacyId = 1;
+  SeriesType type = 2;
+  string title = 3;
+  string shortTitle = 4;
+  string originalTitle = 5;
+  string slug = 6;
+  // bool hidden
+  google.protobuf.Timestamp createdAt = 8;
+  string description = 9;
+  string shortDescription = 10;
+  repeated string tags = 11;
+  Cover cover = 12;
+  // bool following
+  // bool catchUp
+  int64 topicId = 15;
+  // what is ID 16?
+  SeriesStatus status = 17;
+  bool rentals = 18;
+}
