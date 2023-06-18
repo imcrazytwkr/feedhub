@@ -1,13 +1,13 @@
 package mappers
 
 import (
-	"sort"
 	"strings"
 	"time"
 
 	"github.com/antchfx/xmlquery"
 	"github.com/imcrazytwkr/feedhub/constants"
 	"github.com/imcrazytwkr/feedhub/models"
+	"github.com/imcrazytwkr/feedhub/utils/feedutil"
 )
 
 func PluckItems(contents *xmlquery.Node) []*models.Entry {
@@ -26,11 +26,7 @@ func PluckItems(contents *xmlquery.Node) []*models.Entry {
 		}
 	}
 
-	sort.Slice(entries, func(i, j int) bool {
-		return entries[i].Published.After(entries[j].Published)
-	})
-
-	return entries
+	return feedutil.SortEntries(entries)
 }
 
 func PickSiteMeta(contents *xmlquery.Node) *models.Feed {

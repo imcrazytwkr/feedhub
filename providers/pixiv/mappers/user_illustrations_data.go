@@ -2,12 +2,11 @@ package mappers
 
 import (
 	"fmt"
-	"sort"
 	"strings"
 	"time"
 
 	"github.com/imcrazytwkr/feedhub/models"
-	"github.com/imcrazytwkr/feedhub/utils/timeutil"
+	"github.com/imcrazytwkr/feedhub/utils/feedutil"
 	"github.com/valyala/fastjson"
 )
 
@@ -46,17 +45,7 @@ func PluckIllustrationEntries(contents *fastjson.Value) ([]*models.Entry, error)
 		illustrations = illustrations[0:i]
 	}
 
-	sort.Slice(illustrations, func(i, j int) bool {
-		illustA := illustrations[i]
-		timeA := timeutil.MaxOfTwo(illustA.Updated, illustA.Published)
-
-		illustB := illustrations[j]
-		timeB := timeutil.MaxOfTwo(illustB.Updated, illustB.Published)
-
-		return timeA.Before(timeB)
-	})
-
-	return illustrations, nil
+	return feedutil.SortEntries(illustrations), nil
 }
 
 func parseImageEntry(key []byte, v *fastjson.Value) *models.Entry {
