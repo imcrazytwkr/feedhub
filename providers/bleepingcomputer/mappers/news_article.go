@@ -53,9 +53,13 @@ func PickArticleContents(root *html.Node) (string, error) {
 	}
 
 	builder := strings.Builder{}
-	err := html.Render(&builder, article)
-	if err != nil {
-		return "", err
+
+	// This skips root element
+	for child := article.FirstChild; child != nil; child = child.NextSibling {
+		err := html.Render(&builder, child)
+		if err != nil {
+			return "", err
+		}
 	}
 
 	return strings.TrimSpace(builder.String()), nil
