@@ -53,5 +53,6 @@ func ResponseFormat(engine *gin.Engine) gin.HandlerFunc {
 
 		c.Request = c.Request.WithContext(context.WithValue(ctx, responseFormatKey, format))
 		engine.HandleContext(c)
+		c.Abort()
 	}
 }
