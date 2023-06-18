@@ -15,5 +15,5 @@ func NewBleepingComputerRouter(provider providers.BleepingComputerProvider) rout
 }
 
 func (r *BleepingComputerRouter) Register(router gin.IRouter) {
-	router.GET("/", r.handleNews)
+	router.GET("", r.handleNews)
 }
