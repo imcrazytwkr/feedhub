@@ -6,6 +6,7 @@ require (
 	github.com/antchfx/htmlquery v1.3.0
 	github.com/antchfx/xmlquery v1.3.17
 	github.com/gin-gonic/gin v1.9.0
+	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 	github.com/google/uuid v1.3.0
 	github.com/rs/zerolog v1.29.0
 	github.com/valyala/fastjson v1.6.4
@@ -21,7 +22,6 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.11.2 // indirect
 	github.com/goccy/go-json v0.10.0 // indirect
-	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.4 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
