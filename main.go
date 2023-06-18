@@ -9,7 +9,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/imcrazytwkr/feedhub/middleware"
+	bp "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer"
 	pp "github.com/imcrazytwkr/feedhub/providers/pixiv"
+	br "github.com/imcrazytwkr/feedhub/routes/bleepingcomputer"
 	pr "github.com/imcrazytwkr/feedhub/routes/pixiv"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -37,6 +39,9 @@ func main() {
 	engine.Use(middleware.ResponseFormat(engine))
 
 	parserPool := &fastjson.ParserPool{}
+
+	bleepingComputerProvider := bp.NewBleepingComputerProvider(http.DefaultClient)
+	br.NewBleepingComputerRouter(bleepingComputerProvider).Register(engine.Group("/bleepingcomputer"))
 
 	pixivProvider := pp.NewPixivProvider(parserPool, http.DefaultClient)
 	pr.NewPixivRouter(pixivProvider).Register(engine.Group("/pixiv"))
