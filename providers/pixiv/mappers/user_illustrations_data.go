@@ -56,11 +56,7 @@ func PluckIllustrationEntries(contents *fastjson.Value) ([]*models.Entry, error)
 		return timeA.Before(timeB)
 	})
 
-	if i == targetLength {
-		return illustrations, nil
-	}
-
-	return illustrations[0:i], nil
+	return illustrations, nil
 }
 
 func parseImageEntry(key []byte, v *fastjson.Value) *models.Entry {

@@ -77,7 +77,7 @@ func (p *pixivProvider) GetUserIllustrations(ctx context.Context, userId int) (*
 
 	payload, err = parser.ParseBytes(body)
 	if err != nil {
-		log.Debug().Err(err).Msg("dailed to parse illustration data body")
+		log.Debug().Err(err).Msg("failed to parse illustration data body")
 		return nil, constants.ErrorMalformedBody
 	}
 
