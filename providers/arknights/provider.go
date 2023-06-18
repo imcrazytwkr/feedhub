@@ -35,14 +35,14 @@ func (p *arknightsProvider) GetNews(ctx context.Context, lang string) (*models.F
 		return nil, nil
 	}
 
-	// Entries from RSS
+	// Entries from API
 	body, err := p.client.GetNews(ctx, language)
 	if err != nil {
 		log.Debug().Err(err).Str("lang", language.String()).Msg("failed to fetch news")
 		return nil, err
 	}
 
-	log.Trace().Str("lang", language.String()).Msg("fetched news RSS")
+	log.Trace().Str("lang", language.String()).Msg("fetched news")
 
 	parser := p.parserPool.Get()
 	defer p.parserPool.Put(parser)
