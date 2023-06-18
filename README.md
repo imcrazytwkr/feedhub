@@ -15,19 +15,17 @@ on a live system.
 
 Requires Go v1.16 or newer (tested on 1.19 and 1.20 only).
 
-### Installing
+### Building
 
-You can use `go get 'https://github.com/imcrazytwkr/feedhub'` to install it on your system.
-In case you want to do it manually, it can be done like so:
+Since integrating protobuf support requires extra steps during build process, it has since been
+automated using [make](https://en.wikipedia.org/wiki/Make_(software)). Assuming you already have
+`make` installed on your system, you can build `feedhub` like this:
 
 ```sh
 $ git clone 'https://github.com/imcrazytwkr/feedhub'
 $ cd feedhub
-$ go build -o feedhub
+$ make
 ```
-
-If there are enough requests for a proper Makefile to automate the build process, it may be added.
-However, it is simple enough right now to not bother with it.
 
 ## Running
 
