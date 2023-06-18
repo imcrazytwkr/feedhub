@@ -21,9 +21,10 @@ type RssContainer struct {
 
 func wrapFeed(feed *RssFeed) *RssContainer {
 	return &RssContainer{
-		Version:          RssVersion,
-		AtomNamespace:    atom.AtomNs,
-		ContentNamespace: ContentNs,
-		Channel:          feed,
+		Version:             RssVersion,
+		AtomNamespace:       atom.AtomNs,
+		ContentNamespace:    ContentNs,
+		DublinCoreNamespace: DublinCoreNs,
+		Channel:             feed,
 	}
 }
