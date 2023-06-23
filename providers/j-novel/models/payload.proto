@@ -1,0 +1,12 @@
+syntax = "proto3";
+package j_novel;
+
+option go_package = "providers/j-novel/models";
+
+import "providers/j-novel/models/events.proto";
+import "providers/j-novel/models/pagination.proto";
+
+message Payload {
+  repeated Event events = 1;
+  Pagination pagination = 2;
+}

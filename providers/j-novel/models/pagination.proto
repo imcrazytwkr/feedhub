@@ -1,0 +1,10 @@
+syntax = "proto3";
+package j_novel;
+
+option go_package = "providers/j-novel/models";
+
+message Pagination {
+  int64 limit = 1;
+  int64 skip = 2;
+  bool lastPage = 3;
+}

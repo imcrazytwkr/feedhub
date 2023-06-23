@@ -1,11 +1,11 @@
 syntax = "proto3";
 package j_novel;
 
-option go_package = "providers/j-novel/proto";
+option go_package = "providers/j-novel/models";
 
 import "google/protobuf/timestamp.proto";
-import "providers/j-novel/proto/cover.proto";
-import "providers/j-novel/proto/series.proto";
+import "providers/j-novel/models/cover.proto";
+import "providers/j-novel/models/series.proto";
 
 message Event {
   string legacyId = 1;

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package j_novel;
 
-option go_package = "providers/j-novel/proto";
+option go_package = "providers/j-novel/models";
 
 message Cover {
   string originalUrl = 1;
