@@ -43,10 +43,9 @@ func (b *BleepingComputerClient) FetchArticle(ctx context.Context, url string) (
 	time.Sleep(time.Duration(rand.Intn(401)+100) * time.Millisecond)
 
 	body, err := httputil.FetchRequest(b.httpClient, req)
-	if err != nil {
-		return nil, err
+	if err == nil && len(body) > 0 {
+		b.cache.Add(url, body)
 	}
 
-	b.cache.Add(url, body)
-	return body, nil
+	return body, err
 }
