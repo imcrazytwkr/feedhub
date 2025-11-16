@@ -27,15 +27,15 @@ func (b *BleepingComputerClient) FetchArticle(ctx context.Context, url string) (
 	log.Trace().Str("url", url).Msg("cache MISS, attempting to query")
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
+	if err != nil {
+		log.Error().Err(err).Msg("failed to create request to fetch news feed")
+		return nil, models.NewHttpError(http.StatusInternalServerError, nil)
+	}
+
 	req.Header = http.Header{
 		constants.UserAgent:            {headerUserAgent},
 		constants.AcceptHeader:         {headerAccept},
 		constants.AcceptLanguageHeader: {headerAcceptLanguage},
-	}
-
-	if err != nil {
-		log.Error().Err(err).Msg("failed to create request to fetch news feed")
-		return nil, models.NewHttpError(http.StatusInternalServerError, nil)
 	}
 
 	// Sleep between 100 and 500ms between requests, randomness isn't crucial enought
