@@ -13,11 +13,11 @@ func SortEntries(entries []*models.Entry) []*models.Entry {
 	}
 
 	sort.Slice(entries, func(i, j int) bool {
-		illustA := entries[i]
-		timeA := timeutil.MaxOfTwo(illustA.Updated, illustA.Published)
+		entryA := entries[i]
+		timeA := timeutil.MaxOfTwo(entryA.Updated, entryA.Published)
 
-		illustB := entries[j]
-		timeB := timeutil.MaxOfTwo(illustB.Updated, illustB.Published)
+		entryB := entries[j]
+		timeB := timeutil.MaxOfTwo(entryB.Updated, entryB.Published)
 
 		// Reverse sort
 		return timeB.Before(timeA)
