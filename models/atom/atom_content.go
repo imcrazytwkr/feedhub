@@ -1,7 +1,7 @@
 package atom
 
 type AtomContent struct {
-	Content string `xml:",chardata"`
+	Content string `xml:",cdata"`
 	Type    string `xml:"type,attr"`
 }
 
