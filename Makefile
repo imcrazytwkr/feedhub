@@ -1,6 +1,8 @@
 # patsubst is used to remove trailing slash from path
 PROJECT_ROOT := $(patsubst %/,%,$(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
 
+.PHONY: all clean build format test
+
 all: clean build
 
 clean:
@@ -11,5 +13,8 @@ clean:
 build:
 	go build -o '$(PROJECT_ROOT)/feedhub'
 
-test:
+format:
+	find '$(PROJECT_ROOT)' -type f -iname '*.go' | xargs dirname | sort | uniq | xargs go fmt
+
+test: format
 	find '$(PROJECT_ROOT)' -type f -iname '*_test.go' | xargs dirname | sort | uniq | xargs go test -timeout 30s
