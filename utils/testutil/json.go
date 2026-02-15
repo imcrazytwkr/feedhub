@@ -13,3 +13,12 @@ func ReadJson(filename string, v any) error {
 
 	return json.Unmarshal(data, v)
 }
+
+func WriteJson(filename string, v any) error {
+	data, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	return os.WriteFile(filename, data, 0644)
+}
