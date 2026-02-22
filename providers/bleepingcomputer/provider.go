@@ -21,7 +21,7 @@ type bleepingComputerProvider struct {
 
 func NewBleepingComputerProvider(httpClient *http.Client) providers.BleepingComputerProvider {
 	return &bleepingComputerProvider{
-		client: h.NewPixivClient(httpClient),
+		client: h.NewBleepingComputerClient(httpClient),
 	}
 }
 

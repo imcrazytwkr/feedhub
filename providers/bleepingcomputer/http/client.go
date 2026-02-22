@@ -16,7 +16,7 @@ type BleepingComputerClient struct {
 	cacheMutex sync.Mutex
 }
 
-func NewPixivClient(httpClient *http.Client) *BleepingComputerClient {
+func NewBleepingComputerClient(httpClient *http.Client) *BleepingComputerClient {
 	return &BleepingComputerClient{
 		httpClient: httpClient,
 		cache:      lru.New(maxCacheEntries),
