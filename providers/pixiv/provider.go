@@ -9,6 +9,7 @@ import (
 	"github.com/imcrazytwkr/feedhub/providers"
 	h "github.com/imcrazytwkr/feedhub/providers/pixiv/http"
 	m "github.com/imcrazytwkr/feedhub/providers/pixiv/mappers"
+	"github.com/imcrazytwkr/feedhub/utils/feedutil"
 	"github.com/imcrazytwkr/feedhub/utils/logutil"
 	"github.com/rs/zerolog"
 	"github.com/valyala/fastjson"
@@ -102,8 +103,8 @@ func (p *pixivProvider) GetUserIllustrations(ctx context.Context, userId int) (*
 
 	feed.Entries = illustrations
 	feed.Author = illustrations[0].Author
-	feed.Updated = illustrations[0].Updated
-	feed.Published = illustrations[0].Published
+	feed.Updated = feedutil.GetLastUpdatedTime(illustrations)
+	feed.Published = feedutil.GetLastPublishedTime(illustrations)
 
 	return feed, nil
 }
