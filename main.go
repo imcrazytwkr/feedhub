@@ -12,9 +12,11 @@ import (
 	akp "github.com/imcrazytwkr/feedhub/providers/arknights"
 	bp "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer"
 	pp "github.com/imcrazytwkr/feedhub/providers/pixiv"
+	trp "github.com/imcrazytwkr/feedhub/providers/tomrigby"
 	akr "github.com/imcrazytwkr/feedhub/routes/arknights"
 	br "github.com/imcrazytwkr/feedhub/routes/bleepingcomputer"
 	pr "github.com/imcrazytwkr/feedhub/routes/pixiv"
+	trr "github.com/imcrazytwkr/feedhub/routes/tomrigby"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/valyala/fastjson"
@@ -50,6 +52,9 @@ func main() {
 
 	pixivProvider := pp.NewPixivProvider(parserPool, http.DefaultClient)
 	pr.NewPixivRouter(pixivProvider).Register(engine.Group("/pixiv"))
+
+	tomRigbyProvider := trp.NewTomRigbyProvider(http.DefaultClient)
+	trr.NewTomRigbyRouter(tomRigbyProvider).Register(engine.Group("/thomasrigby"))
 
 	engine.Run(fmt.Sprintf("%s:%s", listenHost, listenPort))
 }
