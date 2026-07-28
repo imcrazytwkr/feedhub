@@ -14,7 +14,7 @@ build:
 	go build -o '$(PROJECT_ROOT)/feedhub'
 
 format:
-	find '$(PROJECT_ROOT)' -type f -iname '*.go' | xargs dirname | sort | uniq | xargs go fmt
+	go fmt '$(PROJECT_ROOT)/...'
 
 test: format
-	find '$(PROJECT_ROOT)' -type f -iname '*_test.go' | xargs dirname | sort | uniq | xargs go test -timeout 30s
+	go test '$(PROJECT_ROOT)/...'
