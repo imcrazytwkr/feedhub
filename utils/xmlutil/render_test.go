@@ -13,7 +13,7 @@ import (
 )
 
 func TestBlogEntriesExtraction(t *testing.T) {
-	feedFile, err := os.Open("test_data/malformed_content.xml")
+	feedFile, err := os.Open("testdata/malformed_content.xml")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -57,7 +57,7 @@ func TestBlogEntriesExtraction(t *testing.T) {
 		t.Fatalf("Could not parse actual DOM from actual content:\n%s\n", actualContent)
 	}
 
-	expectedContent, err := os.ReadFile("test_data/clean_content.html")
+	expectedContent, err := os.ReadFile("testdata/clean_content.html")
 	if err != nil {
 		t.Fatal(err)
 	}

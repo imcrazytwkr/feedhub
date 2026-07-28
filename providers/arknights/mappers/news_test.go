@@ -12,7 +12,7 @@ import (
 )
 
 func TestNewsEntriesExtraction(t *testing.T) {
-	feedFile, err := os.ReadFile("test_data/news_feed.json")
+	feedFile, err := os.ReadFile("testdata/news_feed.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -34,7 +34,7 @@ func TestNewsEntriesExtraction(t *testing.T) {
 	}
 
 	var expectedEntries []*models.Entry
-	err = testutil.ReadJson("test_data/expected_entries.json", &expectedEntries)
+	err = testutil.ReadJson("testdata/expected_entries.json", &expectedEntries)
 	if err != nil {
 		t.Fatal(err)
 	}
