@@ -15,7 +15,7 @@ import (
 const expectedDescription = "The MOVEit Transfer extortion attacks continue to dominate the news cycle, with the Clop ransomware operation now extorting organizations breached in the attacks."
 
 func TestNewsArticleDescriptionExtraction(t *testing.T) {
-	articleFile, err := os.ReadFile("test_data/news_article.html")
+	articleFile, err := os.ReadFile("testdata/news_article.html")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -38,7 +38,7 @@ func TestNewsArticleDescriptionExtraction(t *testing.T) {
 }
 
 func TestNewsArticleContentExtraction(t *testing.T) {
-	articleFile, err := os.ReadFile("test_data/news_article.html")
+	articleFile, err := os.ReadFile("testdata/news_article.html")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -62,7 +62,7 @@ func TestNewsArticleContentExtraction(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	expectedContent, err := os.ReadFile("test_data/expected_content.html")
+	expectedContent, err := os.ReadFile("testdata/expected_content.html")
 	if err != nil {
 		t.Fatal(err)
 	}

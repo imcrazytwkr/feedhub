@@ -10,7 +10,7 @@ import (
 )
 
 func TestIllustrationIdsExtraction(t *testing.T) {
-	sourceData, err := os.ReadFile("test_data/user_illustration_ids_body.json")
+	sourceData, err := os.ReadFile("testdata/user_illustration_ids_body.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -28,7 +28,7 @@ func TestIllustrationIdsExtraction(t *testing.T) {
 	}
 
 	var expectedIllustrationIds []int
-	err = testutil.ReadJson("test_data/expected_illustration_ids.json", &expectedIllustrationIds)
+	err = testutil.ReadJson("testdata/expected_illustration_ids.json", &expectedIllustrationIds)
 	if err != nil {
 		t.Fatal(err)
 	}

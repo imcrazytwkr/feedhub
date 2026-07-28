@@ -12,7 +12,7 @@ import (
 )
 
 func TestBlogEntriesExtraction(t *testing.T) {
-	feedFile, err := os.Open("test_data/blog_feed.xml")
+	feedFile, err := os.Open("testdata/blog_feed.xml")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -41,7 +41,7 @@ func TestBlogEntriesExtraction(t *testing.T) {
 	}
 
 	var expectedEntries []*models.Entry
-	err = testutil.ReadJson("test_data/expected_entries.json", &expectedEntries)
+	err = testutil.ReadJson("testdata/expected_entries.json", &expectedEntries)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -53,7 +53,7 @@ func TestBlogEntriesExtraction(t *testing.T) {
 }
 
 func TestSiteMetaExtraction(t *testing.T) {
-	feedFile, err := os.Open("test_data/blog_feed.xml")
+	feedFile, err := os.Open("testdata/blog_feed.xml")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -75,7 +75,7 @@ func TestSiteMetaExtraction(t *testing.T) {
 	actualMeta := mappers.PickSiteMeta(contents)
 
 	var expectedMeta models.Feed
-	testutil.ReadJson("test_data/expected_meta.json", &expectedMeta)
+	testutil.ReadJson("testdata/expected_meta.json", &expectedMeta)
 
 	if actualMeta.Title != expectedMeta.Title {
 		t.Logf("Titles mismatch, expected %q, got %q", expectedMeta.Title, actualMeta.Title)
