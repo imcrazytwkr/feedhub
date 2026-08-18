@@ -1,7 +1,6 @@
 package mappers
 
 import (
-	"bytes"
 	"strconv"
 	"strings"
 	"time"
@@ -10,11 +9,14 @@ import (
 	"github.com/imcrazytwkr/feedhub/models"
 	m "github.com/imcrazytwkr/feedhub/providers/arknights/models"
 	"github.com/imcrazytwkr/feedhub/utils/feedutil"
-	"github.com/valyala/fastjson"
 )
 
-func PluckEntries(contents *fastjson.Value, language m.Language) []*models.Entry {
-	items := contents.GetArray("data", "items")
+func PluckEntries(contents *m.NewsResponse, language m.Language) []*models.Entry {
+	if contents == nil {
+		return nil
+	}
+
+	items := contents.Data.Items
 	if len(items) == 0 {
 		return nil
 	}
@@ -22,16 +24,17 @@ func PluckEntries(contents *fastjson.Value, language m.Language) []*models.Entry
 	entries := make([]*models.Entry, len(items))
 	i := 0
 	for _, item := range items {
-		id := parseId(item.Get("id"))
+		id := parseId(item.Id)
 		if len(id) == 0 {
 			continue
 		}
 
 		entries[i] = &models.Entry{
-			Title:     parseText(item.Get("title")),
-			Published: parsePublished(item.Get("publishedAt")),
+			// `Id` should be unset so that it's auto-generated in RSS-compatible format
+			Title:     strings.TrimSpace(item.Title),
+			Published: parsePublished(item.PublishedAt),
 			Link:      generateLink(id, language),
-			Content:   parseContent(item.Get("content")),
+			Content:   parseContent(item.Content),
 		}
 
 		i++
@@ -44,22 +47,8 @@ func PluckEntries(contents *fastjson.Value, language m.Language) []*models.Entry
 	return feedutil.SortEntries(entries)
 }
 
-func parseText(value *fastjson.Value) string {
-	if value == nil {
-		return ""
-	}
-
-	text, err := value.StringBytes()
-	if err != nil {
-		return ""
-	}
-
-	// bytes version works faster and makes less allocations
-	return string(bytes.TrimSpace(text))
-}
-
-func parseId(value *fastjson.Value) string {
-	id := parseText(value)
+func parseId(value string) string {
+	id := strings.TrimSpace(value)
 	if len(id) == 0 {
 		return id
 	}
@@ -72,8 +61,8 @@ func parseId(value *fastjson.Value) string {
 	return id
 }
 
-func parsePublished(value *fastjson.Value) time.Time {
-	text := parseText(value)
+func parsePublished(value string) time.Time {
+	text := strings.TrimSpace(value)
 	if len(text) == 0 {
 		return constants.TimeZero
 	}
@@ -90,26 +79,22 @@ func generateLink(id string, language m.Language) string {
 	return hostPrefixes[language] + id
 }
 
-func parseContent(value *fastjson.Value) string {
-	if value == nil {
-		return ""
-	}
-
-	array, err := value.Array()
-	if err != nil || len(array) == 0 {
+func parseContent(nodes []m.ContentNode) string {
+	if len(nodes) == 0 {
 		return ""
 	}
 
 	// Fast-tracking for the most common variant
-	if len(array) == 1 {
-		return parseText(array[0].Get("value"))
+	if len(nodes) == 1 {
+		return strings.TrimSpace(nodes[0].Value)
 	}
 
 	builder := strings.Builder{}
-	for _, node := range array {
-		text := parseText(node.Get("value"))
+	for _, node := range nodes {
+		text := strings.TrimSpace(node.Value)
 		if len(text) > 0 {
 			builder.WriteString(text)
+			builder.WriteByte('\n')
 		}
 	}
 
