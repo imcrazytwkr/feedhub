@@ -11,6 +11,16 @@ import (
 	"github.com/rs/zerolog"
 )
 
+/**
+ * NOT cached/singleflighted by design: splitting illustration meta fetching
+ * to single-work per request increases the upstream load by 15x on average.
+ *
+ * Splitting data fetching based on cached data, then batching cache misses
+ * would be hard to maintain. Considering illustration meta is mostly static,
+ * persistent (DB-backed?) cache with no meta expiry based on iserId+illustId
+ * would be the cleanest option but seems to be out of scope for now because
+ * it would neccessitate completely remaking this provider.
+ */
 func (p *PixivClient) FetchUserIllustrationsData(
 	ctx context.Context,
 	userId int,
