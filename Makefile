@@ -15,6 +15,7 @@ build:
 
 format:
 	go fmt '$(PROJECT_ROOT)/...'
+	go mod tidy
 
 test: format
 	go test '$(PROJECT_ROOT)/...' | sed '/^?/d'
