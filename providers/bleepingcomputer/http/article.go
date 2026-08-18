@@ -13,19 +13,37 @@ import (
 )
 
 func (b *BleepingComputerClient) FetchArticle(ctx context.Context, url string) ([]byte, error) {
-	log := zerolog.Ctx(ctx)
+	log := zerolog.Ctx(ctx).With().Str("url", url).Logger()
 
 	cached, ok := b.cache.Get(url)
 	if ok {
-		log.Trace().Str("url", url).Msg("cache HIT")
+		log.Trace().Msg("cache HIT")
 		return cached, nil
 	}
 
-	log.Trace().Str("url", url).Msg("cache MISS, attempting to query")
+	log.Trace().Msg("cache MISS, attempting to query")
 
+	bgCtx := log.WithContext(context.Background())
+	result, err, _ := b.articleGroup.Do(url, func() (any, error) {
+		cached, ok := b.cache.Get(url)
+		if ok {
+			return cached, nil
+		}
+
+		return b.fetchArticle(bgCtx, url)
+	})
+
+	if err != nil {
+		return nil, err
+	}
+
+	return result.([]byte), nil
+}
+
+func (b *BleepingComputerClient) fetchArticle(ctx context.Context, url string) ([]byte, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {
-		log.Error().Err(err).Msg("failed to create request to fetch news feed")
+		zerolog.Ctx(ctx).Error().Err(err).Msg("failed to create request to fetch news feed")
 		return nil, models.NewHttpError(http.StatusInternalServerError, nil)
 	}
 
