@@ -5,37 +5,38 @@ import (
 	"strconv"
 
 	"github.com/imcrazytwkr/feedhub/constants"
-	"github.com/valyala/fastjson"
+	m "github.com/imcrazytwkr/feedhub/providers/pixiv/models"
 )
 
-func PluckIllustrationIds(contents *fastjson.Value) ([]int, error) {
+func PluckIllustrationIds(contents *m.Response[m.IllustrationIDsBody]) ([]int, error) {
 	if contents == nil {
 		return nil, nil
 	}
 
-	err, hasError := processErrorFields(contents)
+	err, hasError := processErrorFields(&contents.ApiError)
 	if hasError {
 		return nil, err
 	}
 
-	payload := contents.GetObject(bodyKey, illustsKey)
-	if payload == nil || payload.Len() == 0 {
+	illusts := contents.Body.Illusts
+	targetLength := len(illusts)
+
+	if targetLength == 0 {
 		return nil, nil
 	}
 
-	targetLength := payload.Len()
 	illustKeys := make([]int, targetLength)
 	i := 0
 
-	payload.Visit(func(key []byte, _ *fastjson.Value) {
-		illustKey, err := strconv.Atoi(string(key))
+	for key := range illusts {
+		illustKey, err := strconv.Atoi(key)
 		if err != nil {
-			return
+			continue
 		}
 
 		illustKeys[i] = illustKey
 		i++
-	})
+	}
 
 	if i < targetLength {
 		return nil, constants.ErrorMalformedBody

@@ -3,18 +3,17 @@ package mappers
 import (
 	"errors"
 
-	"github.com/valyala/fastjson"
+	m "github.com/imcrazytwkr/feedhub/providers/pixiv/models"
 )
 
-func processErrorFields(contents *fastjson.Value) (error, bool) {
-	if !contents.GetBool(errorKey) {
+func processErrorFields(apiError *m.ApiError) (error, bool) {
+	if apiError == nil || !apiError.Error {
 		return nil, false
 	}
 
-	message := contents.GetStringBytes(messageKey)
-	if len(message) == 0 {
+	if len(apiError.Message) == 0 {
 		return nil, true
 	}
 
-	return errors.New(string(message)), true
+	return errors.New(apiError.Message), true
 }
