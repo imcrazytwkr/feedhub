@@ -17,4 +17,4 @@ format:
 	go fmt '$(PROJECT_ROOT)/...'
 
 test: format
-	go test '$(PROJECT_ROOT)/...'
+	go test '$(PROJECT_ROOT)/...' | sed '/^?/d'
