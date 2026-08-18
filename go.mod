@@ -11,6 +11,7 @@ require (
 	github.com/rs/zerolog v1.29.0
 	github.com/valyala/fastjson v1.6.4
 	golang.org/x/net v0.7.0
+	golang.org/x/sync v0.3.0
 )
 
 require (
