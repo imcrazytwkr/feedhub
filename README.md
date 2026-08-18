@@ -13,7 +13,7 @@ on a live system.
 
 ### Prerequisites
 
-Requires Go v1.16 or newer (tested on 1.19 and 1.20 only).
+Requires Go v1.25 or newer.
 
 ### Building
 
@@ -50,13 +50,3 @@ config file arises, it will be added.
 - `HOST` sets an IP address for ingressor to listen on. Can be left empty for listening on all
   available interfaces.
 - `PORT` sets a port for ingressor to listen in. Must be within range of 0-65535 if specified.
-
-## Built With
-
-* [gin](https://github.com/gin-gonic/gin) - HTTP web framework written in Go with Martini-like API
-* [fastjson](https://github.com/valyala/fastjson) - fastest JSON parser for Go
-* [zerolog](https://github.com/rs/zerolog) - Zero Allocation JSON Logger
-
-## License
-
-[MIT © Denis Chernov](./LICENSE)

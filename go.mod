@@ -9,7 +9,6 @@ require (
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 	github.com/google/uuid v1.6.0
 	github.com/rs/zerolog v1.35.1
-	github.com/valyala/fastjson v1.6.10
 	golang.org/x/net v0.58.0
 	golang.org/x/sync v0.22.0
 )
