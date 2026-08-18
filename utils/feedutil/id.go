@@ -3,14 +3,12 @@ package feedutil
 import (
 	"fmt"
 	"net/url"
+	"time"
 
 	"github.com/google/uuid"
 	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/utils/timeutil"
 )
-
-// @TODO: replace with `time.DateOnly` when stable Go hits 1.20.x branch
-const dateFormat = "2006-01-02"
 
 func GenerateId(entry *models.Entry) string {
 	if len(entry.Id) > 0 {
@@ -25,7 +23,7 @@ func GenerateId(entry *models.Entry) string {
 }
 
 func generateGuid(entry *models.Entry) string {
-	dateString := timeutil.FormatMaxOfTwo(dateFormat, entry.Updated, entry.Published)
+	dateString := timeutil.FormatMaxOfTwo(time.DateOnly, entry.Updated, entry.Published)
 	if len(dateString) == 0 {
 		return entry.Link
 	}

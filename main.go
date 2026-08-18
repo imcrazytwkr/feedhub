@@ -56,7 +56,7 @@ func main() {
 	tomRigbyProvider := trp.NewTomRigbyProvider(http.DefaultClient)
 	trr.NewTomRigbyRouter(tomRigbyProvider).Register(engine.Group("/thomasrigby"))
 
-	engine.Run(fmt.Sprintf("%s:%s", listenHost, listenPort))
+	engine.Run(net.JoinHostPort(listenHost, listenPort))
 }
 
 func getHost() (string, error) {

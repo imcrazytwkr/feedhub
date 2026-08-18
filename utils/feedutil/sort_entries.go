@@ -1,7 +1,7 @@
 package feedutil
 
 import (
-	"sort"
+	"slices"
 
 	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/utils/timeutil"
@@ -12,15 +12,11 @@ func SortEntries(entries []*models.Entry) []*models.Entry {
 		return entries
 	}
 
-	sort.Slice(entries, func(i, j int) bool {
-		entryA := entries[i]
-		timeA := timeutil.MaxOfTwo(entryA.Updated, entryA.Published)
-
-		entryB := entries[j]
-		timeB := timeutil.MaxOfTwo(entryB.Updated, entryB.Published)
-
+	slices.SortFunc(entries, func(a, b *models.Entry) int {
+		timeA := timeutil.MaxOfTwo(a.Updated, a.Published)
+		timeB := timeutil.MaxOfTwo(b.Updated, b.Published)
 		// Reverse sort
-		return timeB.Before(timeA)
+		return timeB.Compare(timeA)
 	})
 
 	return entries

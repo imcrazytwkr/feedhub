@@ -7,7 +7,7 @@ import (
 
 type HTTPError struct {
 	StatusCode int
-	Message    interface{}
+	Message    any
 }
 
 // Makes HTTPError compatible with the error interface
@@ -15,7 +15,7 @@ func (h *HTTPError) Error() string {
 	return fmt.Sprintf("%d - %v", h.StatusCode, h.Message)
 }
 
-func NewHttpError(statusCode int, message interface{}) error {
+func NewHttpError(statusCode int, message any) error {
 	h := &HTTPError{
 		StatusCode: statusCode,
 		Message:    http.StatusText(statusCode),

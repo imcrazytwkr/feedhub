@@ -1,7 +1,6 @@
 package http
 
 import (
-	"context"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -26,17 +25,15 @@ func TestFetchArticleSingleflight(t *testing.T) {
 	errCh := make(chan error, 2)
 	bodies := make(chan []byte, 2)
 
-	for i := 0; i < 2; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			body, err := client.FetchArticle(context.Background(), url)
+	for range 2 {
+		wg.Go(func() {
+			body, err := client.FetchArticle(t.Context(), url)
 			if err != nil {
 				errCh <- err
 				return
 			}
 			bodies <- body
-		}()
+		})
 	}
 
 	wg.Wait()
