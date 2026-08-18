@@ -1,7 +1,7 @@
 package mappers
 
 import (
-	"sort"
+	"slices"
 	"strconv"
 
 	"github.com/imcrazytwkr/feedhub/constants"
@@ -41,6 +41,7 @@ func PluckIllustrationIds(contents *fastjson.Value) ([]int, error) {
 		return nil, constants.ErrorMalformedBody
 	}
 
-	sort.Sort(sort.Reverse(sort.IntSlice(illustKeys)))
+	slices.Sort(illustKeys)
+	slices.Reverse(illustKeys)
 	return illustKeys, nil
 }

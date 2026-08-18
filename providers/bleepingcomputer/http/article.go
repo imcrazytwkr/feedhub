@@ -2,7 +2,7 @@ package http
 
 import (
 	"context"
-	"math/rand"
+	"math/rand/v2"
 	"net/http"
 	"time"
 
@@ -23,14 +23,14 @@ func (b *BleepingComputerClient) FetchArticle(ctx context.Context, url string) (
 
 	log.Trace().Msg("cache MISS, attempting to query")
 
-	bgCtx := log.WithContext(context.Background())
+	detached := log.WithContext(context.WithoutCancel(ctx))
 	result, err, _ := b.articleGroup.Do(url, func() (any, error) {
 		cached, ok := b.cache.Get(url)
 		if ok {
 			return cached, nil
 		}
 
-		return b.fetchArticle(bgCtx, url)
+		return b.fetchArticle(detached, url)
 	})
 
 	if err != nil {
@@ -55,7 +55,7 @@ func (b *BleepingComputerClient) fetchArticle(ctx context.Context, url string) (
 
 	// Sleep between 100 and 500ms between requests, randomness isn't crucial enought
 	// to use crypto/rand here
-	time.Sleep(time.Duration(rand.Intn(401)+100) * time.Millisecond)
+	time.Sleep(time.Duration(rand.IntN(401)+100) * time.Millisecond)
 
 	body, err := httputil.FetchRequest(b.httpClient, req)
 	if err == nil && len(body) > 0 {
