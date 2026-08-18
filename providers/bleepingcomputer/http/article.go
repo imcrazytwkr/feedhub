@@ -15,13 +15,10 @@ import (
 func (b *BleepingComputerClient) FetchArticle(ctx context.Context, url string) ([]byte, error) {
 	log := zerolog.Ctx(ctx)
 
-	b.cacheMutex.Lock()
-	defer b.cacheMutex.Unlock()
-
 	cached, ok := b.cache.Get(url)
 	if ok {
 		log.Trace().Str("url", url).Msg("cache HIT")
-		return cached.([]byte), nil
+		return cached, nil
 	}
 
 	log.Trace().Str("url", url).Msg("cache MISS, attempting to query")
