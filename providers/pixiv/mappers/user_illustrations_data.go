@@ -6,36 +6,37 @@ import (
 	"time"
 
 	"github.com/imcrazytwkr/feedhub/models"
+	m "github.com/imcrazytwkr/feedhub/providers/pixiv/models"
 	"github.com/imcrazytwkr/feedhub/utils/feedutil"
-	"github.com/valyala/fastjson"
 )
 
-func PluckIllustrationEntries(contents *fastjson.Value) ([]*models.Entry, error) {
+func PluckIllustrationEntries(contents *m.Response[m.IllustrationDataBody]) ([]*models.Entry, error) {
 	if contents == nil {
 		return nil, nil
 	}
 
-	err, hasError := processErrorFields(contents)
+	err, hasError := processErrorFields(&contents.ApiError)
 	if hasError {
 		return nil, err
 	}
 
-	payload := contents.GetObject(bodyKey, worksKey)
-	if payload == nil || payload.Len() == 0 {
+	works := contents.Body.Works
+	targetLength := len(works)
+
+	if targetLength == 0 {
 		return nil, nil
 	}
 
-	targetLength := payload.Len()
 	illustrations := make([]*models.Entry, targetLength)
 	i := 0
 
-	payload.Visit(func(key []byte, v *fastjson.Value) {
-		entry := parseImageEntry(key, v)
+	for key, work := range works {
+		entry := parseImageEntry(key, &work)
 		if entry != nil {
 			illustrations[i] = entry
 			i++
 		}
-	})
+	}
 
 	if i == 0 {
 		return nil, nil
@@ -48,57 +49,53 @@ func PluckIllustrationEntries(contents *fastjson.Value) ([]*models.Entry, error)
 	return feedutil.SortEntries(illustrations), nil
 }
 
-func parseImageEntry(key []byte, v *fastjson.Value) *models.Entry {
+func parseImageEntry(key string, work *m.IllustrationWork) *models.Entry {
 	if len(key) == 0 {
 		return nil
 	}
 
-	link := postPrefix + string(key)
-
-	title := v.GetStringBytes(titleKey)
-	if len(title) == 0 {
+	if len(work.Title) == 0 {
 		return nil
 	}
 
-	author := v.GetStringBytes(userNameKey)
-	if len(author) == 0 {
+	if len(work.UserName) == 0 {
 		return nil
 	}
 
-	publicationDate, _ := time.Parse(time.RFC3339, string(v.GetStringBytes(createDateKey)))
-	updatedDate, _ := time.Parse(time.RFC3339, string(v.GetStringBytes(updateDateKey)))
+	publicationDate, _ := time.Parse(time.RFC3339, work.CreateDate)
+	updatedDate, _ := time.Parse(time.RFC3339, work.UpdateDate)
 	if publicationDate.IsZero() && updatedDate.IsZero() {
 		return nil
 	}
 
-	description := parseDescription(v, link)
+	link := postPrefix + key
+
+	description := parseDescription(work, link)
 	if len(description) == 0 {
 		return nil
 	}
 
 	return &models.Entry{
-		Title:     string(title),
+		Title:     work.Title,
 		Published: publicationDate,
 		Updated:   updatedDate,
-		Author:    string(author),
+		Author:    work.UserName,
 		Link:      link,
 		Content:   description,
 	}
 }
 
-func parseDescription(v *fastjson.Value, link string) string {
-	pageCount := v.GetInt(pageCountKey)
-	if pageCount == 0 {
+func parseDescription(work *m.IllustrationWork, link string) string {
+	if work.PageCount == 0 {
 		return ""
 	}
 
-	previewUrl := v.GetStringBytes(urlKey)
-	if len(previewUrl) == 0 {
+	if len(work.URL) == 0 {
 		return ""
 	}
 
 	// m[1] - post prefix, m[2] - extension
-	match := imageRe.FindSubmatch(previewUrl)
+	match := imageRe.FindStringSubmatch(work.URL)
 	if len(match) == 0 || len(match[1]) == 0 || len(match[2]) == 0 {
 		return ""
 	}
@@ -106,7 +103,7 @@ func parseDescription(v *fastjson.Value, link string) string {
 	description := strings.Builder{}
 
 	// Post images
-	for page := 0; page < pageCount; page++ {
+	for page := 0; page < work.PageCount; page++ {
 		fmt.Fprintf(
 			&description,
 			`<p><img src="%s/img-master/img%s_p%d_square1200.%s" alt="page %d cover" /></p>`,
@@ -119,9 +116,8 @@ func parseDescription(v *fastjson.Value, link string) string {
 	}
 
 	// Original description, if any
-	sourceDescription := v.GetStringBytes(descriptionKey)
-	if len(sourceDescription) > 0 {
-		fmt.Fprintf(&description, `<p>%s</p>`, sourceDescription)
+	if len(work.Description) > 0 {
+		fmt.Fprintf(&description, `<p>%s</p>`, work.Description)
 	}
 
 	description.WriteString(`<p>`)
@@ -130,9 +126,8 @@ func parseDescription(v *fastjson.Value, link string) string {
 	fmt.Fprintf(&description, `[<a href="%s">link</a>]`, link)
 
 	// Artist link
-	artistId := v.GetStringBytes(userIdKey)
-	if len(artistId) > 0 {
-		fmt.Fprintf(&description, ` [<a href="%s%s">artist</a>]`, artistPrefix, artistId)
+	if len(work.UserID) > 0 {
+		fmt.Fprintf(&description, ` [<a href="%s%s">artist</a>]`, artistPrefix, work.UserID)
 	}
 
 	// End links

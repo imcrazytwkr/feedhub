@@ -1,29 +1,22 @@
 package mappers_test
 
 import (
-	"os"
 	"testing"
 
 	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/providers/pixiv/mappers"
+	m "github.com/imcrazytwkr/feedhub/providers/pixiv/models"
 	"github.com/imcrazytwkr/feedhub/utils/testutil"
-	"github.com/valyala/fastjson"
 )
 
 func TestIllustrationEntriesExtraction(t *testing.T) {
-	sourceData, err := os.ReadFile("testdata/user_illustration_data_body.json")
+	var contents m.Response[m.IllustrationDataBody]
+	err := testutil.ReadJson("testdata/user_illustration_data_body.json", &contents)
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	parser := &fastjson.Parser{}
-
-	contents, err := parser.ParseBytes(sourceData)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	entries, err := mappers.PluckIllustrationEntries(contents)
+	entries, err := mappers.PluckIllustrationEntries(&contents)
 	if err != nil {
 		t.Fatal(err)
 	}

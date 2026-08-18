@@ -19,7 +19,6 @@ import (
 	trr "github.com/imcrazytwkr/feedhub/routes/tomrigby"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
-	"github.com/valyala/fastjson"
 )
 
 func main() {
@@ -42,15 +41,13 @@ func main() {
 	engine.Use(middleware.RequestId())
 	engine.Use(middleware.ResponseFormat(engine))
 
-	parserPool := &fastjson.ParserPool{}
-
 	arknightsProvider := akp.NewArknightsProvider(http.DefaultClient)
 	akr.NewArknightsRouter(arknightsProvider).Register(engine.Group("/arknights"))
 
 	bleepingComputerProvider := bp.NewBleepingComputerProvider(http.DefaultClient)
 	br.NewBleepingComputerRouter(bleepingComputerProvider).Register(engine.Group("/bleepingcomputer"))
 
-	pixivProvider := pp.NewPixivProvider(parserPool, http.DefaultClient)
+	pixivProvider := pp.NewPixivProvider(http.DefaultClient)
 	pr.NewPixivRouter(pixivProvider).Register(engine.Group("/pixiv"))
 
 	tomRigbyProvider := trp.NewTomRigbyProvider(http.DefaultClient)
