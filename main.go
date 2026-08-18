@@ -44,7 +44,7 @@ func main() {
 
 	parserPool := &fastjson.ParserPool{}
 
-	arknightsProvider := akp.NewArknightsProvider(parserPool, http.DefaultClient)
+	arknightsProvider := akp.NewArknightsProvider(http.DefaultClient)
 	akr.NewArknightsRouter(arknightsProvider).Register(engine.Group("/arknights"))
 
 	bleepingComputerProvider := bp.NewBleepingComputerProvider(http.DefaultClient)
