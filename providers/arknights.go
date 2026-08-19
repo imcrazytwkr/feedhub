@@ -7,5 +7,5 @@ import (
 )
 
 type ArknightsProvider interface {
-	GetNews(ctx context.Context, language string) (*models.Feed, error)
+	GetNews(ctx context.Context, language models.Language) (*models.Feed, error)
 }

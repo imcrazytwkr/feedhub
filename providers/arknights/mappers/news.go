@@ -11,7 +11,7 @@ import (
 	"github.com/imcrazytwkr/feedhub/utils/feedutil"
 )
 
-func PluckEntries(contents *m.NewsResponse, language m.Language) []*models.Entry {
+func PluckEntries(contents *m.NewsResponse, language models.Language) []*models.Entry {
 	if contents == nil {
 		return nil
 	}
@@ -75,7 +75,7 @@ func parsePublished(value string) time.Time {
 	return timestamp
 }
 
-func generateLink(id string, language m.Language) string {
+func generateLink(id string, language models.Language) string {
 	return hostPrefixes[language] + id
 }
 
