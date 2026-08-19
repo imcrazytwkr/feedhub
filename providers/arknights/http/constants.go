@@ -1,6 +1,6 @@
 package http
 
-import "github.com/imcrazytwkr/feedhub/providers/arknights/models"
+import "github.com/imcrazytwkr/feedhub/models"
 
 // @source: https://arknights.global/news
 const hostPrefixGlobal = "https://arknights.global:10024"
@@ -9,7 +9,7 @@ var hostPrefixes = map[models.Language]string{
 	models.LanguageEn: hostPrefixGlobal,
 
 	// @source: https://www.arknights.jp/news
-	models.LanguageJp: "https://www.arknights.jp:10014",
+	models.LanguageJa: "https://www.arknights.jp:10014",
 }
 
 const newsPath = "/news"

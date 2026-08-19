@@ -8,12 +8,11 @@ import (
 	"strconv"
 
 	"github.com/imcrazytwkr/feedhub/models"
-	m "github.com/imcrazytwkr/feedhub/providers/arknights/models"
 	"github.com/imcrazytwkr/feedhub/utils/httputil"
 	"github.com/rs/zerolog"
 )
 
-func (c *ArknightsClient) GetNews(ctx context.Context, language m.Language) ([]byte, error) {
+func (c *ArknightsClient) GetNews(ctx context.Context, language models.Language) ([]byte, error) {
 	log := zerolog.Ctx(ctx)
 
 	uri, err := getNewsUrl(language)
@@ -31,7 +30,7 @@ func (c *ArknightsClient) GetNews(ctx context.Context, language m.Language) ([]b
 	return httputil.FetchRequest(c.httpClient, req)
 }
 
-func getNewsUrl(language m.Language) (string, error) {
+func getNewsUrl(language models.Language) (string, error) {
 	hostPrefix, exists := hostPrefixes[language]
 	if !exists {
 		return "", fmt.Errorf("mapping for language %s does not exist", language)
@@ -48,7 +47,7 @@ func getNewsUrl(language m.Language) (string, error) {
 	return uri.String(), nil
 }
 
-func getNewsQuery(language m.Language) string {
+func getNewsQuery(language models.Language) string {
 	query := url.Values{}
 	query.Add("lang", language.String())
 	query.Add("limit", strconv.Itoa(entryLimit))

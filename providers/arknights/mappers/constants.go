@@ -1,20 +1,20 @@
 package mappers
 
-import "github.com/imcrazytwkr/feedhub/providers/arknights/models"
+import "github.com/imcrazytwkr/feedhub/models"
 
 const hostPrefixGlobal = "https://arknights.global/news/"
 
 var hostPrefixes = map[models.Language]string{
 	models.LanguageEn: hostPrefixGlobal,
-	models.LanguageJp: "https://www.arknights.jp/news/",
+	models.LanguageJa: "https://www.arknights.jp/news/",
 }
 
 var feedTitles = map[models.Language]string{
 	models.LanguageEn: "Arknights",
-	models.LanguageJp: "アークナイツ",
+	models.LanguageJa: "アークナイツ",
 }
 
 var feedDescriptions = map[models.Language]string{
 	models.LanguageEn: "Arknights news",
-	models.LanguageJp: "アークナイツ ニュース",
+	models.LanguageJa: "アークナイツ ニュース",
 }

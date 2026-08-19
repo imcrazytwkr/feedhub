@@ -22,40 +22,43 @@ func NewArknightsProvider(httpClient *http.Client) providers.ArknightsProvider {
 	return &arknightsProvider{h.NewArknightsClient(httpClient)}
 }
 
-func (p *arknightsProvider) GetNews(ctx context.Context, lang string) (*models.Feed, error) {
-	log := zerolog.Ctx(ctx)
-
-	language := m.ParseLanguage(lang)
-	if language == m.LanguageUnknown {
-		log.Debug().Msgf("unknown language: %q", lang)
+func (p *arknightsProvider) GetNews(ctx context.Context, lang models.Language) (*models.Feed, error) {
+	switch lang {
+	case models.LanguageEn, models.LanguageJa:
+		// All good, nothing to do here
+		break
+	default:
+		zerolog.Ctx(ctx).Debug().Msgf("unsupported language: %q", lang)
 		return nil, nil
 	}
 
+	log := zerolog.Ctx(ctx).With().Str("lang", lang.String()).Logger()
+
 	// Entries from API
-	body, err := p.client.GetNews(ctx, language)
+	body, err := p.client.GetNews(ctx, lang)
 	if err != nil {
-		log.Debug().Str("lang", lang).Err(err).Msg("failed to fetch news")
+		log.Debug().Err(err).Msg("failed to fetch news")
 		return nil, err
 	}
 
-	log.Trace().Str("lang", lang).Msg("fetched news")
+	log.Trace().Msg("fetched news")
 
 	var payload m.NewsResponse
 	err = json.Unmarshal(body, &payload)
 	if err != nil {
-		log.Debug().Err(err).Str("lang", lang).Msg("failed to parse news")
+		log.Debug().Err(err).Msg("failed to parse news")
 		return nil, constants.ErrorMalformedBody
 	}
 
-	log.Trace().Str("lang", lang).Msg("successfully parsed news")
+	log.Trace().Msg("successfully parsed news")
 
-	entries := mappers.PluckEntries(&payload, language)
+	entries := mappers.PluckEntries(&payload, lang)
 	if len(entries) == 0 {
-		log.Trace().Str("lang", lang).Msg("no news found, exiting early")
+		log.Trace().Msg("no news found, exiting early")
 		return nil, nil
 	}
 
-	feed := mappers.GenerateSiteMeta(language)
+	feed := mappers.GenerateSiteMeta(lang)
 	feed.Published = entries[0].Published
 	feed.Entries = entries
 	return feed, nil

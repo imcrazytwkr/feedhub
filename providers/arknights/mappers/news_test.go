@@ -16,7 +16,7 @@ func TestNewsEntriesExtraction(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	entries := mappers.PluckEntries(&contents, m.LanguageEn)
+	entries := mappers.PluckEntries(&contents, models.LanguageEn)
 	if len(entries) < 1 {
 		t.Fatal("No entries were parsed")
 	}

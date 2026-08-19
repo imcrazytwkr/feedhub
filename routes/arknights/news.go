@@ -5,15 +5,14 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
+	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/utils/ginutil"
 )
 
 func (r *ArknightsRouter) handleNews(c *gin.Context) {
-	lang := c.Param("lang")
-	if len(lang) == 0 {
-		lang = "en"
-	} else {
-		lang = strings.TrimRight(lang, "/")
+	lang := models.ParseLanguage(strings.TrimRight(c.Param("lang"), "/"))
+	if lang == models.LanguageUnknown {
+		lang = models.LanguageEn
 	}
 
 	feed, err := r.provider.GetNews(c.Request.Context(), lang)
