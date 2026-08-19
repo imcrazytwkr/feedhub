@@ -40,11 +40,11 @@ var langToLocale = map[models.Language]Locale{
 	models.LanguageZh: LocaleZh,
 }
 
-func GetLocaleFor(lang models.Language) Locale {
-	locale, ok := langToLocale[lang]
+func GetLocaleFor(lang models.Language) (locale Locale, ok bool) {
+	locale, ok = langToLocale[lang]
 	if !ok {
-		return DefaultLocale
+		locale = DefaultLocale
 	}
 
-	return locale
+	return
 }
