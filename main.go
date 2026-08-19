@@ -10,9 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/imcrazytwkr/feedhub/middleware"
 	akp "github.com/imcrazytwkr/feedhub/providers/arknights"
+	awsp "github.com/imcrazytwkr/feedhub/providers/aws"
 	bp "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer"
 	pp "github.com/imcrazytwkr/feedhub/providers/pixiv"
 	akr "github.com/imcrazytwkr/feedhub/routes/arknights"
+	awsr "github.com/imcrazytwkr/feedhub/routes/aws"
 	br "github.com/imcrazytwkr/feedhub/routes/bleepingcomputer"
 	pr "github.com/imcrazytwkr/feedhub/routes/pixiv"
 	"github.com/rs/zerolog"
@@ -41,6 +43,9 @@ func main() {
 
 	arknightsProvider := akp.NewArknightsProvider(http.DefaultClient)
 	akr.NewArknightsRouter(arknightsProvider).Register(engine.Group("/arknights"))
+
+	awsProvider := awsp.NewAWSDirectoryProvider(http.DefaultClient)
+	awsr.NewAWSRouter(awsProvider).Register(engine.Group("/aws"))
 
 	bleepingComputerProvider := bp.NewBleepingComputerProvider(http.DefaultClient)
 	br.NewBleepingComputerRouter(bleepingComputerProvider).Register(engine.Group("/bleepingcomputer"))

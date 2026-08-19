@@ -24,7 +24,11 @@ func NewAWSDirectoryProvider(httpClient *http.Client) providers.AWSDirectoryProv
 }
 
 func (p *awsDirectoryProvider) GetBlogs(ctx context.Context, category string, lang models.Language) (*models.Feed, error) {
-	locale := m.GetLocaleFor(lang)
+	locale, supported := m.GetLocaleFor(lang)
+	if !supported {
+		zerolog.Ctx(ctx).Debug().Msgf("unsupported language: %q", lang)
+		return nil, nil
+	}
 	category = strings.ToLower(strings.TrimSpace(category))
 
 	log := zerolog.Ctx(ctx).With().Str("locale", locale.String()).Str("category", category).Logger()
