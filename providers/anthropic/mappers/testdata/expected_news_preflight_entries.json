@@ -1,0 +1,502 @@
+[
+  {
+    "Id": "",
+    "Title": "How Claude’s text watermark works",
+    "Published": "2026-08-14T19:16:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-text-watermark",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Improving Fable 5's biology safeguards",
+    "Published": "2026-08-07T01:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
+    "Published": "2026-08-04T17:02:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/tino-cuellar",
+    "Description": "Mariano-Florentino (Tino) Cuéllar will join Anthropic as its first Chief Global Affairs Officer.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Investigating three real-world incidents in our cybersecurity evaluations",
+    "Published": "2026-07-30T15:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Our position on open-weights models",
+    "Published": "2026-07-27T18:36:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/position-open-weights-models",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
+    "Published": "2026-07-27T15:32:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/cognizant-anthropic",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude Opus 5",
+    "Published": "2026-07-24T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-opus-5",
+    "Description": "Opus 5 is a step change improvement for the Opus tier powering long-running agents while delivering improvements in coding and professional work.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "A research agenda for the Economic Futures Research Fund",
+    "Published": "2026-07-22T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+    "Description": "We’re sharing the research agenda for the Anthropic Economic Futures Research Fund.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Ask Claude about the Anthropic Economic Index",
+    "Published": "2026-07-22T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/anthropic-economic-index-connector",
+    "Description": "We're launching the Anthropic Economic Index connector for Claude, which lets anyone explore real data about AI and work.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic is donating another $20 million to Public First Action",
+    "Published": "2026-07-21T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/donation-public-first-action",
+    "Description": "Anthropic is contributing an additional $20 million to Public First Action, bringing our total support to $40 million.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Apply for Anthropic’s AI for Science rare disease research grants",
+    "Published": "2026-07-20T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/rare-disease-research-grants",
+    "Description": "Anthropic is sharing a focused call for AI for Science applications centered specifically on rare genetic diseases. Accepted applicants will receive up to $50,000 in Claude credits over six months, with the goal of building a community of researchers looking into how AI can reshape our understanding of rare disease.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude for Teachers",
+    "Published": "2026-07-14T15:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-for-teachers",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic commits $10 million to Canadian AI research",
+    "Published": "2026-07-14T13:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/canadian-ai-research",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "UST is bringing Claude to physical AI",
+    "Published": "2026-07-09T23:55:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/ust-claude",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Inviting hard questions",
+    "Published": "2026-07-09T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/hard-questions",
+    "Description": "We’re asking the public for their hardest questions about AI, and committing to show our work as we address them.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Ben Bernanke appointed to Anthropic’s Long-Term Benefit Trust",
+    "Published": "2026-07-09T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/ben-bernanke",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing a way to reflect on how you use Claude",
+    "Published": "2026-07-09T13:20:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/reflect-with-claude",
+    "Description": "Introducing a new way to reflect on and refine how you use Claude. It lets you easily track and visualize how you use Claude, and decide whether that time aligns with your goals.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+    "Published": "2026-07-06T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+    "Description": "Since 2025, the Government of Alberta has been using Claude Code with both Opus and Sonnet models to review its systems, find vulnerabilities, and fix them.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "More details on Fable 5’s cyber safeguards and our jailbreak framework",
+    "Published": "2026-07-02T21:07:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude Sonnet 5",
+    "Published": "2026-06-30T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-sonnet-5",
+    "Description": "Sonnet 5 delivers frontier performance across coding, agents, and professional work at scale.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Redeploying Fable 5",
+    "Published": "2026-06-30T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/redeploying-fable-5",
+    "Description": "Fable 5 returns globally July 1. We're also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude Science, an AI workbench for scientists, is now available",
+    "Published": "2026-06-30T15:07:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-science-ai-workbench",
+    "Description": "Claude Science is a customizable app that integrates the tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude Tag",
+    "Published": "2026-06-23T14:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/introducing-claude-tag",
+    "Description": "Claude Tag is a new way for teams to work with Claude.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+    "Published": "2026-06-17T19:34:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+    "Published": "2026-06-12T23:38:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/fable-mythos-access",
+    "Description": "The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Results from the first Anthropic Public Record",
+    "Published": "2026-06-12T21:51:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/anthropic-public-record",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "TCS and Anthropic partner to bring Claude to regulated industries",
+    "Published": "2026-06-12T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+    "Description": "We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+    "Published": "2026-06-11T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+    "Description": "We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude Corps",
+    "Published": "2026-06-11T13:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-corps",
+    "Description": "We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude Fable 5 and Claude Mythos 5",
+    "Published": "2026-06-09T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "Description": "Our next generation of intelligence for the hardest knowledge work and coding problems.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+    "Published": "2026-06-03T13:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/services-track-partner-hub",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "What we learned mapping a year’s worth of AI-enabled cyber threats",
+    "Published": "2026-06-03T10:55:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+    "Description": "As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Expanding Project Glasswing",
+    "Published": "2026-06-02T11:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/expanding-project-glasswing",
+    "Description": "We’re extending Project Glasswing to approximately 150 new organizations in more than fifteen countries.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic confidentially submits draft S-1 to the SEC",
+    "Published": "2026-06-01T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "Description": "Anthropic has confidentially submitted a draft S-1 registration statement to the Securities and Exchange Commission",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+    "Published": "2026-05-28T17:13:20.706Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/series-h",
+    "Description": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude Opus 4.8",
+    "Published": "2026-05-28T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-opus-4-8",
+    "Description": "An upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic opens Milan office to support Italian enterprise, research, and developers",
+    "Published": "2026-05-27T21:16:00.842Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/milan-office-opening",
+    "Description": "We're opening a new office in Milan, our sixth in Europe.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+    "Published": "2026-05-26T23:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+    "Published": "2026-05-25T17:10:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+    "Description": "The full text of Chris Olah's remarks on the Pope's encyclical on AI.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Project Glasswing: An initial update",
+    "Published": "2026-05-22T18:00:12.585Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/glasswing-initial-update",
+    "Description": "An early update on what we've learned from Project Glasswing.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Widening the conversation on frontier AI",
+    "Published": "2026-05-19T21:55:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/widening-conversation-ai",
+    "Description": "Over the past several months, we’ve been organizing dialogues with groups whose work and traditions bear on the questions raised by AI.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+    "Published": "2026-05-19T12:30:10.501Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/anthropic-kpmg",
+    "Description": "KPMG and Anthropic announce a global alliance, with Claude integrated into KPMG's Digital Gateway platform and available to all 276,000+ employees.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic acquires Stainless",
+    "Published": "2026-05-18T17:02:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+    "Description": "Anthropic is acquiring Stainless, a leader in SDKs and MCP server tooling.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+    "Published": "2026-05-14T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/pwc-expanded-partnership",
+    "Description": "PwC will roll out Claude Code and Cowork starting with U.S. teams and expanding toward a global workforce of hundreds of thousands of professionals, establish a joint Center of Excellence, and train and certify 30,000 PwC professionals on Claude.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic forms $200 million partnership with the Gates Foundation",
+    "Published": "2026-05-14T14:45:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/gates-foundation-partnership",
+    "Description": "We’re partnering with the Gates Foundation to commit $200 million in grant funding, Claude usage credits, and technical support for programs in global health, life sciences, education, and economic mobility over the next four years.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Claude for Small Business",
+    "Published": "2026-05-13T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-for-small-business",
+    "Description": "We're launching Claude for Small Business, a package of connectors and ready-to-run workflows that put Claude inside the tools small businesses use every day.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Higher usage limits for Claude and a compute deal with SpaceX",
+    "Published": "2026-05-06T14:36:27.834Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/higher-limits-spacex",
+    "Description": "We’ve raised Claude's usage limits and agreed a new compute partnership with SpaceX that will substantially increase our capacity in the near term.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Agents for financial services",
+    "Published": "2026-05-05T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/finance-agents",
+    "Description": "We're releasing ten new Cowork and Claude Code plugins, integrations with the Microsoft 365 suite, new connectors, and an MCP app for financial services and insurance organizations.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Building a new enterprise AI services company with Blackstone, Hellman \u0026 Friedman, and Goldman Sachs",
+    "Published": "2026-05-04T15:42:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/enterprise-ai-services-company",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude for Creative Work",
+    "Published": "2026-04-28T19:22:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/news/claude-for-creative-work",
+    "Description": "",
+    "Content": ""
+  }
+]

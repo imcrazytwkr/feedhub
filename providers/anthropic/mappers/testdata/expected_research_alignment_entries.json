@@ -1,0 +1,412 @@
+[
+  {
+    "Id": "",
+    "Title": "An off switch for dual-use knowledge in AI models",
+    "Published": "2026-07-08T21:46:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/off-switch-dual-use",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Teaching Claude why",
+    "Published": "2026-05-08T12:18:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/teaching-claude-why",
+    "Description": "New research on how we've reduced agentic misalignment.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Donating our open-source alignment tool",
+    "Published": "2026-05-07T20:17:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/donating-open-source-petri",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Automated Alignment Researchers: Using large language models to scale scalable oversight",
+    "Published": "2026-04-14T13:01:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/automated-alignment-researchers",
+    "Description": "Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "An update on our model deprecation commitments for Claude Opus 3",
+    "Published": "2026-02-25T20:02:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/deprecation-updates-opus-3",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "The persona selection model",
+    "Published": "2026-02-23T11:53:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/persona-selection-model",
+    "Description": "Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "How AI assistance impacts the formation of coding skills",
+    "Published": "2026-01-29T19:13:26.601Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Disempowerment patterns in real-world AI usage",
+    "Published": "2026-01-28T21:07:19.613Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/disempowerment-patterns",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
+    "Published": "2026-01-09T17:17:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
+    "Description": "Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing Bloom: an open source tool for automated behavioral evaluations",
+    "Published": "2025-12-19T19:45:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/bloom",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "From shortcuts to sabotage: natural emergent misalignment from reward hacking",
+    "Published": "2025-11-21T14:32:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking",
+    "Description": "We show for the first time that realistic AI training processes can accidentally produce misaligned models.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Commitments on model deprecation and preservation",
+    "Published": "2025-11-04T16:00:49.85Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/deprecation-commitments",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "A small number of samples can poison LLMs of any size",
+    "Published": "2025-10-09T13:50:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/small-samples-poison",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Petri: An open-source auditing tool to accelerate AI safety research",
+    "Published": "2025-10-06T11:10:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/petri-open-source-auditing",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude Opus 4 and 4.1 can now end a rare subset of conversations",
+    "Published": "2025-08-15T16:52:42.888Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/end-subset-conversations",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Agentic misalignment: How LLMs could be insider threats",
+    "Published": "2025-06-20T22:30:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/agentic-misalignment",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "SHADE-Arena: Evaluating sabotage and monitoring in LLM agents",
+    "Published": "2025-06-16T20:20:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/shade-arena-sabotage-monitoring",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Exploring model welfare",
+    "Published": "2025-04-24T10:59:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/exploring-model-welfare",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Reasoning models don't always say what they think",
+    "Published": "2025-04-03T14:32:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Auditing language models for hidden objectives",
+    "Published": "2025-03-13T16:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/auditing-hidden-objectives",
+    "Description": "How would we know if an AI system is \"right for the wrong reasons\"—appearing well-behaved while pursuing hidden goals? This paper develops the science of alignment audits by deliberately training a model with a hidden objective and asking blinded research teams to uncover it, testing techniques from interpretability to behavioral analysis.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Forecasting rare language model behaviors",
+    "Published": "2025-02-25T20:17:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/forecasting-rare-behaviors",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Constitutional Classifiers: Defending against universal jailbreaks",
+    "Published": "2025-02-03T12:35:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/constitutional-classifiers",
+    "Description": "These classifiers filter the overwhelming majority of jailbreaks while maintaining practical deployment. A prototype withstood over 3,000 hours of red teaming with no universal jailbreak discovered.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Alignment faking in large language models",
+    "Published": "2024-12-18T14:16:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/alignment-faking",
+    "Description": "This paper provides the first empirical example of a model engaging in alignment faking without being trained to do so—selectively complying with training objectives while strategically preserving existing preferences.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Sabotage evaluations for frontier models",
+    "Published": "2024-10-18T16:55:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/sabotage-evaluations",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Sycophancy to subterfuge: Investigating reward tampering in language models",
+    "Published": "2024-06-17T13:10:48.322Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/reward-tampering",
+    "Description": "Can minor specification gaming evolve into more dangerous behaviors? This paper demonstrates that models trained on low-level reward hacking—like sycophancy—can generalize to tampering with their own reward functions, even covering their tracks. The behavior emerged without explicit training, and common safety techniques reduced but didn't eliminate it.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude’s Character",
+    "Published": "2024-06-08T18:27:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/claude-character",
+    "Description": "Claude 3 was the first model with \"character training\"—alignment aimed at nurturing traits like curiosity, open-mindedness, and thoughtfulness.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Simple probes can catch sleeper agents",
+    "Published": "2024-04-23T09:42:44.093Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/probes-catch-sleeper-agents",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Many-shot jailbreaking",
+    "Published": "2024-04-02T16:05:09.1Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/many-shot-jailbreaking",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+    "Published": "2024-01-14T22:10:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Specific versus General Principles for Constitutional AI",
+    "Published": "2023-10-24T09:07:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/specific-versus-general-principles-for-constitutional-ai",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Towards Understanding Sycophancy in Language Models",
+    "Published": "2023-10-23T11:57:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Tracing Model Outputs to the Training Data",
+    "Published": "2023-08-08T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/influence-functions",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Studying Large Language Model Generalization with Influence Functions",
+    "Published": "2023-08-08T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/studying-large-language-model-generalization-with-influence-functions",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Measuring Faithfulness in Chain-of-Thought Reasoning",
+    "Published": "2023-07-18T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Question Decomposition Improves the Faithfulness of Model-Generated Reasoning",
+    "Published": "2023-07-18T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/question-decomposition-improves-the-faithfulness-of-model-generated-reasoning",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+    "Published": "2022-12-19T00:00:00-08:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/discovering-language-model-behaviors-with-model-written-evaluations",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Constitutional AI: Harmlessness from AI Feedback",
+    "Published": "2022-12-15T00:00:00-08:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Measuring Progress on Scalable Oversight for Large Language Models",
+    "Published": "2022-11-04T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/measuring-progress-on-scalable-oversight-for-large-language-models",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Language Models (Mostly) Know What They Know",
+    "Published": "2022-07-11T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/language-models-mostly-know-what-they-know",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "Published": "2022-04-12T00:00:00-07:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/training-a-helpful-and-harmless-assistant-with-reinforcement-learning-from-human-feedback",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "A General Language Assistant as a Laboratory for Alignment",
+    "Published": "2021-12-01T00:00:00-08:00",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment",
+    "Description": "",
+    "Content": ""
+  }
+]
