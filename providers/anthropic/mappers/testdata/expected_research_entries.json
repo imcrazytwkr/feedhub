@@ -1,0 +1,502 @@
+[
+  {
+    "Id": "",
+    "Title": "How Claude is accelerating protein design and analytical chemistry",
+    "Published": "2026-08-18T14:45:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+    "Description": "In this post, we share two results that show how Claude can help life scientists increase the pace of their research. In the first, we tested Claude’s ability to design protein binders from scratch, a key step in creating protein-based drugs that has historically taken a specialist weeks or months per target. In the second example, we evaluated whether Claude can accelerate chemical analysis. Claude Opus 5, a generally available model, was given NMR and LC-MS data (the data that allows chemists to assess the identity and purity of the compounds they work with).",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Patterns and problems in emerging multiagent systems",
+    "Published": "2026-08-13T01:08:37.877Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/multiagent-systems",
+    "Description": "Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Reviewing the evidence on worker retraining programs",
+    "Published": "2026-08-12T17:05:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs",
+    "Description": "We're sharing a review of the evidence on worker retraining programs, coauthored by independent researcher David Roodman and Anthropic's Maxim Massenkoff.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Learning more about Claude's mathematical capabilities",
+    "Published": "2026-08-10T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/riemann-zeta",
+    "Description": "An unreleased research version of Claude has made strides on a problem related to the Riemann hypothesis. It improved a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Discovering cryptographic weaknesses with Claude",
+    "Published": "2026-07-28T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+    "Description": "cryptographic algorithms. The first attack significantly weakens HAWK, a digital signature scheme that was built for a future world where quantum computers are able to break existing standards. The second identifies a new way to attack round-reduced AES, the most widely used symmetric cipher.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Project Pilot: Can AI control a drone?",
+    "Published": "2026-07-24T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/project-pilot",
+    "Description": "Working with Andon Labs, we’ve developed a new series of evaluations that assess AI models’ ability to use a flying drone, culminating in a new benchmark: Drone-Bench.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "How Canada uses Claude: Findings from the Anthropic Economic Index",
+    "Published": "2026-07-14T13:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/how-canada-uses-claude",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude’s values across models and languages",
+    "Published": "2026-07-13T17:08:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/claude-values-models-languages",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Claude plays robotics",
+    "Published": "2026-07-09T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/claude-plays-robotics",
+    "Description": "In project Fetch, we examined how humans can use models to get robots to perform complex tasks. Now, we investigate many models on a large variety of different robotics tasks in simulation, to see how good models are at controlling robots themselves.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "An off switch for dual-use knowledge in AI models",
+    "Published": "2026-07-08T21:46:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/off-switch-dual-use",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "A global workspace in language models",
+    "Published": "2026-07-06T14:12:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/global-workspace",
+    "Description": "New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don’t appear in the model’s output.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic Economic Index report: Cadences",
+    "Published": "2026-06-26T20:08:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/economic-index-june-2026-report",
+    "Description": "In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Project Fetch: Phase two",
+    "Published": "2026-06-18T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/project-fetch-phase-two",
+    "Description": "We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated robotics tasks. We found that Claude Opus 4.7, operating without human assistance, was about 20 times faster than the fastest human team at all tasks completed by participants less than a year ago.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Agentic coding and persistent returns to expertise",
+    "Published": "2026-06-16T11:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/claude-code-expertise",
+    "Description": "This report provides evidence on how Claude Code is used in practice, based on a privacy-preserving analysis of around 400,000 interactive sessions from around 235,000 people between October 2025 and April 2026.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Paving the way for agents in biology",
+    "Published": "2026-06-08T13:20:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/agents-in-biology",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Measuring LLMs’ impact on N-day exploits",
+    "Published": "2026-06-08T13:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/n-days",
+    "Description": "In cybersecurity, a large fraction of real-world harm comes from N-days: vulnerabilities that have already been publicly disclosed, but only patched on some devices. In this post, we evaluate how much large language models can accelerate and automate the process of developing N-day exploits.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Making Claude a chemist",
+    "Published": "2026-06-05T20:57:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/making-claude-a-chemist",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Mapping AI-enabled cyber threats: Insights from the LLM ATT\u0026CK Navigator",
+    "Published": "2026-06-03T18:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/attack-navigator",
+    "Description": "We’ve spent the past year investigating how threat actors are weaponizing AI to conduct cyber operations. Today, we’re sharing a new analysis that maps these real-world attacks onto the MITRE ATT\u0026CK framework.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "What we learned mapping a year’s worth of AI-enabled cyber threats",
+    "Published": "2026-06-03T10:55:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/AI-enabled-cyber-threats-mitre-attack",
+    "Description": "As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Coding agents in the social sciences",
+    "Published": "2026-05-27T17:51:10.599Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/coding-agents-social-sciences",
+    "Description": "Results from a survey of 1,260 social scientists about AI and coding agent use.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Project Glasswing: An initial update",
+    "Published": "2026-05-22T18:00:12.585Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/glasswing-initial-update",
+    "Description": "An early update on what we've learned from Project Glasswing.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Measuring LLMs’ ability to develop exploits",
+    "Published": "2026-05-22T17:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/exploit-evals",
+    "Description": "We've developed two new, challenging academic benchmarks measuring AI models’ ability to develop exploits, and an updated version of the benchmark measuring smart contract exploitation.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "2028: Two scenarios for global AI leadership",
+    "Published": "2026-05-14T17:06:12.172Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/2028-ai-leadership",
+    "Description": "Our views on the AI competition between the US and China.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Teaching Claude why",
+    "Published": "2026-05-08T12:18:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/teaching-claude-why",
+    "Description": "New research on how we've reduced agentic misalignment.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Natural Language Autoencoders: Turning Claude’s thoughts into text",
+    "Published": "2026-05-07T21:21:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/natural-language-autoencoders",
+    "Description": "AI models like Claude talk in words but think in numbers. In this study, we train Claude to translate its thoughts into human-readable text.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Donating our open-source alignment tool",
+    "Published": "2026-05-07T20:17:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/donating-open-source-petri",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Focus areas for The Anthropic Institute",
+    "Published": "2026-05-07T10:02:22.668Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/anthropic-institute-agenda",
+    "Description": "At The Anthropic Institute (TAI), we’ll be using the information we can access from within a frontier lab to investigate AI’s impact on the world, and sharing our learnings with the public. Here, we’re sharing the questions that drive our research agenda.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "How people ask Claude for personal guidance",
+    "Published": "2026-04-30T16:35:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/claude-personal-guidance",
+    "Description": "We look at what types of guidance people ask of Claude, and describe how this research shaped the training of our newest models.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Evaluating Claude’s bioinformatics research capabilities with BioMysteryBench",
+    "Published": "2026-04-29T20:26:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Announcing the Anthropic Economic Index Survey",
+    "Published": "2026-04-22T14:27:03.434Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/economic-index-survey-announcement",
+    "Description": "We're launching the Anthropic Economic Index Survey, a monthly survey conducted through Anthropic Interviewer.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "What 81,000 people told us about the economics of AI",
+    "Published": "2026-04-22T14:12:30.673Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/81k-economics",
+    "Description": "Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Automated Alignment Researchers: Using large language models to scale scalable oversight",
+    "Published": "2026-04-14T13:01:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/automated-alignment-researchers",
+    "Description": "Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Trustworthy agents in practice",
+    "Published": "2026-04-09T16:34:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/trustworthy-agents",
+    "Description": "AI “agents” represent the latest major shift in how people and organizations are using AI. Here, we explain how they work and how we ensure they're trustworthy.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Assessing Claude Mythos Preview’s cybersecurity capabilities",
+    "Published": "2026-04-07T09:35:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/mythos-preview",
+    "Description": "Claude Mythos Preview is a new general-purpose language model that is strikingly capable at computer security tasks. This post provides technical details for researchers and practitioners who want to understand exactly how we have been testing this model, and what we have found over the past month.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Emotion concepts and their function in a large language model",
+    "Published": "2026-04-02T10:56:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/emotion-concepts-function",
+    "Description": "All modern language models sometimes act like they have emotions. What’s behind these behaviors? Our interpretability team investigates.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "How Australia Uses Claude: Findings from the Anthropic Economic Index",
+    "Published": "2026-03-31T22:17:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/how-australia-uses-claude",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic Economic Index report: Learning curves",
+    "Published": "2026-03-24T10:41:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/economic-index-march-2026-report",
+    "Description": "Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Introducing our Science Blog",
+    "Published": "2026-03-23T23:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/introducing-anthropic-science",
+    "Description": "We’re launching a new blog about AI and science. We’ll share research happening at Anthropic and elsewhere, collaborations with external researchers and labs, and discuss practical workflows for scientists using AI in their own work.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Long-running Claude for scientific computing",
+    "Published": "2026-03-23T23:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/long-running-Claude",
+    "Description": "A practical guide to running Claude Code for multi-day scientific tasks—test oracles, persistent memory, and orchestration patterns.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Vibe physics: The AI grad student",
+    "Published": "2026-03-23T23:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/vibe-physics",
+    "Description": "Can AI do theoretical physics? I decided to find out by supervising Claude through a real research calculation, start to finish, without ever touching a file myself.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "A “diff” tool for AI: Finding behavioral differences in new models",
+    "Published": "2026-03-13T10:15:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/diff-tool",
+    "Description": "\"Model diffing\" is a powerful way to understand how models change during fine-tuning. Our new research paper extends this method to its most challenging and general use case: comparing models with entirely different architectures.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Partnering with Mozilla to improve Firefox’s security",
+    "Published": "2026-03-06T10:30:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/mozilla-firefox-security",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Reverse engineering Claude's CVE-2026-2796 exploit",
+    "Published": "2026-03-06T00:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/exploit",
+    "Description": "This post dives deep into how Claude wrote an exploit for one of the vulnerabilities it found in Firefox.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Labor market impacts of AI: A new measure and early evidence",
+    "Published": "2026-03-05T19:59:21.508Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/labor-market-impacts",
+    "Description": "In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "An update on our model deprecation commitments for Claude Opus 3",
+    "Published": "2026-02-25T20:02:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/deprecation-updates-opus-3",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "The persona selection model",
+    "Published": "2026-02-23T11:53:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/persona-selection-model",
+    "Description": "Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Anthropic Education Report: The AI Fluency Index",
+    "Published": "2026-02-23T11:52:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/AI-fluency-index",
+    "Description": "We tracked 11 observable behaviors across thousands of Claude.ai conversations to build the AI Fluency Index — a baseline for measuring how people collaborate with AI today.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Measuring AI agent autonomy in practice",
+    "Published": "2026-02-18T15:10:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/measuring-agent-autonomy",
+    "Description": "How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "India Country Brief: The Anthropic Economic Index",
+    "Published": "2026-02-16T01:38:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/india-brief-economic-index",
+    "Description": "",
+    "Content": ""
+  },
+  {
+    "Id": "",
+    "Title": "Evaluating and mitigating the growing risk of LLM-discovered 0-days",
+    "Published": "2026-02-05T00:00:00Z",
+    "Updated": "0001-01-01T00:00:00Z",
+    "Author": "",
+    "Link": "https://www.anthropic.com/research/zero-days",
+    "Description": "AI models can now find high-severity vulnerabilities at scale. This is a moment to empower defenders. We're now using Claude to find and help fix vulnerabilities in open source software.",
+    "Content": ""
+  }
+]
