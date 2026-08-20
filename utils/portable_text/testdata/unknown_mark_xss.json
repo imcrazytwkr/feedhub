@@ -1,0 +1,1 @@
+{"_type": "block", "_key": "a", "markDefs": [], "children": [{"_type": "span", "_key": "b", "marks": ["\"><img src=x onerror=alert(1)>"], "text": "Hi"}]}
