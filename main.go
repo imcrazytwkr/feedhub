@@ -9,10 +9,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/imcrazytwkr/feedhub/middleware"
+	anp "github.com/imcrazytwkr/feedhub/providers/anthropic"
 	akp "github.com/imcrazytwkr/feedhub/providers/arknights"
 	awsp "github.com/imcrazytwkr/feedhub/providers/aws"
 	bp "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer"
 	pp "github.com/imcrazytwkr/feedhub/providers/pixiv"
+	anr "github.com/imcrazytwkr/feedhub/routes/anthropic"
 	akr "github.com/imcrazytwkr/feedhub/routes/arknights"
 	awsr "github.com/imcrazytwkr/feedhub/routes/aws"
 	br "github.com/imcrazytwkr/feedhub/routes/bleepingcomputer"
@@ -40,6 +42,9 @@ func main() {
 	engine.Use(middleware.DefaultLogger(), gin.Recovery())
 	engine.Use(middleware.RequestId())
 	engine.Use(middleware.ResponseFormat(engine))
+
+	anthropicProvider := anp.NewAnthropicProvider(http.DefaultClient)
+	anr.NewAnthropicRouter(anthropicProvider).Register(engine.Group("/anthropic"))
 
 	arknightsProvider := akp.NewArknightsProvider(http.DefaultClient)
 	akr.NewArknightsRouter(arknightsProvider).Register(engine.Group("/arknights"))
