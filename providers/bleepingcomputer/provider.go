@@ -5,7 +5,6 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/antchfx/htmlquery"
 	"github.com/antchfx/xmlquery"
 	"github.com/imcrazytwkr/feedhub/constants"
 	"github.com/imcrazytwkr/feedhub/models"
@@ -13,6 +12,7 @@ import (
 	h "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer/http"
 	m "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer/mappers"
 	"github.com/rs/zerolog"
+	"golang.org/x/net/html"
 )
 
 type bleepingComputerProvider struct {
@@ -58,7 +58,7 @@ func (p *bleepingComputerProvider) GetNews(ctx context.Context) (*models.Feed, e
 			return nil, err
 		}
 
-		article, err := htmlquery.Parse(bytes.NewReader(body))
+		article, err := html.Parse(bytes.NewReader(body))
 		if err != nil {
 			log.Debug().Err(err).Str("url", entry.Link).Msg("failed to parse article")
 			return nil, constants.ErrorMalformedBody

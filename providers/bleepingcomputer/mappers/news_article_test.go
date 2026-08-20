@@ -6,7 +6,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/antchfx/htmlquery"
 	"github.com/imcrazytwkr/feedhub/providers/bleepingcomputer/mappers"
 	"github.com/imcrazytwkr/feedhub/utils/testutil"
 	"golang.org/x/net/html"
@@ -20,7 +19,7 @@ func TestNewsArticleDescriptionExtraction(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	contents, err := htmlquery.Parse(bytes.NewReader(articleFile))
+	contents, err := html.Parse(bytes.NewReader(articleFile))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -43,7 +42,7 @@ func TestNewsArticleContentExtraction(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	contents, err := htmlquery.Parse(bytes.NewReader(articleFile))
+	contents, err := html.Parse(bytes.NewReader(articleFile))
 	if err != nil {
 		t.Fatal(err)
 	}

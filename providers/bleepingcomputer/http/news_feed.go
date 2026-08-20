@@ -4,7 +4,6 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/imcrazytwkr/feedhub/constants"
 	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/utils/httputil"
 	"github.com/rs/zerolog"
@@ -19,11 +18,7 @@ func (b *BleepingComputerClient) FetchNewsFeed(ctx context.Context) ([]byte, err
 		return nil, models.NewHttpError(http.StatusInternalServerError, nil)
 	}
 
-	req.Header = http.Header{
-		constants.UserAgent:            {headerUserAgent},
-		constants.AcceptHeader:         {headerAccept},
-		constants.AcceptLanguageHeader: {headerAcceptLanguage},
-	}
+	req.Header = headers.Clone()
 
 	return httputil.FetchRequest(b.httpClient, req)
 }

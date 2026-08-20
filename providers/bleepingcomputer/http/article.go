@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/imcrazytwkr/feedhub/constants"
 	"github.com/imcrazytwkr/feedhub/models"
 	"github.com/imcrazytwkr/feedhub/utils/httputil"
 	"github.com/rs/zerolog"
@@ -47,11 +46,7 @@ func (b *BleepingComputerClient) fetchArticle(ctx context.Context, url string) (
 		return nil, models.NewHttpError(http.StatusInternalServerError, nil)
 	}
 
-	req.Header = http.Header{
-		constants.UserAgent:            {headerUserAgent},
-		constants.AcceptHeader:         {headerAccept},
-		constants.AcceptLanguageHeader: {headerAcceptLanguage},
-	}
+	req.Header = headers.Clone()
 
 	// Sleep between 100 and 500ms between requests, randomness isn't crucial enought
 	// to use crypto/rand here
