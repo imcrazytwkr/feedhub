@@ -13,11 +13,13 @@ import (
 	akp "github.com/imcrazytwkr/feedhub/providers/arknights"
 	awsp "github.com/imcrazytwkr/feedhub/providers/aws"
 	bp "github.com/imcrazytwkr/feedhub/providers/bleepingcomputer"
+	cp "github.com/imcrazytwkr/feedhub/providers/cursor"
 	pp "github.com/imcrazytwkr/feedhub/providers/pixiv"
 	anr "github.com/imcrazytwkr/feedhub/routes/anthropic"
 	akr "github.com/imcrazytwkr/feedhub/routes/arknights"
 	awsr "github.com/imcrazytwkr/feedhub/routes/aws"
 	br "github.com/imcrazytwkr/feedhub/routes/bleepingcomputer"
+	cr "github.com/imcrazytwkr/feedhub/routes/cursor"
 	pr "github.com/imcrazytwkr/feedhub/routes/pixiv"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -54,6 +56,9 @@ func main() {
 
 	bleepingComputerProvider := bp.NewBleepingComputerProvider(http.DefaultClient)
 	br.NewBleepingComputerRouter(bleepingComputerProvider).Register(engine.Group("/bleepingcomputer"))
+
+	cursorProvider := cp.NewCursorProvider(http.DefaultClient)
+	cr.NewCursorRouter(cursorProvider).Register(engine.Group("/cursor"))
 
 	pixivProvider := pp.NewPixivProvider(http.DefaultClient)
 	pr.NewPixivRouter(pixivProvider).Register(engine.Group("/pixiv"))
